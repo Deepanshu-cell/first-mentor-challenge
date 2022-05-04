@@ -8,10 +8,9 @@ function App() {
 
   let [rating, setRating] = React.useState(0);
 
-  const getSubmit = () => {};
   return (
     <div className="App">
-      {isSubmit == false ? (
+      {isSubmit === false ? (
         <Rating setSubmit={setSubmit} setRating={setRating}></Rating>
       ) : (
         <Thankyou rating={rating}></Thankyou>
