@@ -69,10 +69,12 @@
 
 .numButton:hover{
     background-color: hsl(216, 12%, 54%);
+    color: white;
 }
 
 .numButton:focus{
     background-color: hsl(25, 97%, 53%);
+    color: white;
 }
 
 .submitButton{

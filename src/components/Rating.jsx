@@ -2,7 +2,18 @@ import React from "react";
 import "./Ratings.css";
 import star from "./icon-star.svg";
 
-function Rating() {
+function Rating(props) {
+  let ratingBtns = [1, 2, 3, 4, 5];
+  let [ratingPressed, setRatingPressed] = React.useState(false);
+
+  const setRatings = (rating) => {
+    props.setRating(rating);
+  };
+
+  const setSubmit = () => {
+    setRatingPressed(true);
+    props.setSubmit(true);
+  };
   return (
     <div className="ratingCard container">
       <div className="card">
@@ -15,27 +26,22 @@ function Rating() {
           is appreciated to help us improve our offering!{" "}
         </div>
         <div className="btnContainer">
-          {" "}
-          <button type="button" class="btn btn-secondary numButton mx-2">
-            1
-          </button>
-          <button type="button" class="btn btn-secondary numButton mx-2">
-            2
-          </button>
-          <button type="button" class="btn btn-secondary numButton mx-2">
-            3
-          </button>
-          <button type="button" class="btn btn-secondary numButton mx-2">
-            4
-          </button>
-          <button type="button" class="btn btn-secondary numButton mx-2">
-            5
-          </button>
+          {ratingBtns.map((rating) => {
+            return (
+              <button
+                className="numButton"
+                onClick={() => {
+                  setRatings(rating);
+                }}
+              >
+                {rating}
+              </button>
+            );
+          })}
         </div>
-        <button type="button" class="btn submitButton m-3">
+        <button type="button" class="btn submitButton m-3" onClick={setSubmit}>
           SUBMIT
         </button>
-
       </div>
     </div>
   );
