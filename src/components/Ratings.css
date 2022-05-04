@@ -1,0 +1,95 @@
+.ratingCard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.starButton{
+  border: none;
+  height: 15%;
+  width: 11%;
+  position:relative;
+  top: -20px;
+  left: -20px;
+    margin: 10px 10px;
+    border-radius: 50%;
+    background-color: hsl(240, 8%, 24%);
+}
+
+.starImg{
+    height: 40%;
+    width: 50%;
+}
+
+.heading{
+    color: white;
+    margin:15px 0px;
+}
+
+.desc{
+    color:  hsl(217, 12%, 63%);
+    font-size: 15px;
+}
+
+.card{
+    height: 50vh;
+    width: 50vh;
+    background-color:    hsl(210, 5%, 8%);
+    margin-top: 20vh;
+    border-radius: 10%;
+    padding: 3%;
+    text-align: left;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.numButton{
+    background-color: hsl(240, 8%, 24%);
+  border: none;
+  color:  hsl(217, 12%, 63%);
+  padding: 15px;
+  position: relative;
+    top: 10px;
+    text-align: center;
+    width: 20%;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 6px;
+  border-radius: 50%;
+}
+
+.numButton:hover{
+    background-color: hsl(216, 12%, 54%);
+}
+
+.numButton:focus{
+    background-color: hsl(25, 97%, 53%);
+}
+
+.submitButton{
+    background-color: hsl(25, 97%, 53%);
+    border: none;
+    color: white;
+    word-spacing:1px;
+    padding: 10px;
+    letter-spacing: 4px;
+    border-radius: 25px;
+}
+
+.submitButton:active{
+    color: hsl(25, 97%, 53%);
+    background-color: white;
+}
+.submitButton:hover{
+    color: hsl(25, 97%, 53%);
+    background-color: white;
+}
