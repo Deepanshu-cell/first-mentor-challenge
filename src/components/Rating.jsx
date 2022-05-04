@@ -7,11 +7,15 @@ function Rating(props) {
   let [ratingPressed, setRatingPressed] = React.useState(false);
 
   const setRatings = (rating) => {
+    setRatingPressed(true);
     props.setRating(rating);
   };
 
   const setSubmit = () => {
-    setRatingPressed(true);
+    if (!ratingPressed) {
+      alert("Please Select a Rating first");
+      return;
+    }
     props.setSubmit(true);
   };
   return (
